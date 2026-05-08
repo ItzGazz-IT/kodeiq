@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Development Packages | KodeIQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="service-pages.css">`n  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <header class="top-nav"><div class="container"><div class="brand"><a href="index.html">Kode<span class="accent">IQ</span></a></div><nav class="nav-links"><a href="index.html">Home</a><a href="services.html">All Services</a><a class="active" href="software-development.html">Software</a></nav></div></header>
+  <main class="container">
+    <section class="hero"><h1>Custom <span>Software Development</span></h1><p>Build custom tools and apps that save time, automate repetitive tasks, and improve how your business operates.</p><div class="price-banner"><strong>From R2500</strong><small>~$150 USD</small></div></section>
+    <div class="currency-toggle-wrap"><span>Currency:</span><button id="currency-toggle">⇄ Show USD</button></div>
+    <section class="packages">
+      <article class="package"><span class="pkg-badge">MVP Build</span><h3 data-zar="R2500" data-usd="$150">R2500</h3><p class="pkg-usd">~$150 USD</p><ul><li>Small custom tool or module</li><li>Core feature implementation</li><li>Basic deployment support</li></ul></article>
+      <article class="package featured"><span class="pkg-badge">Growth Build</span><h3 data-zar="R6500" data-usd="$395">R6500</h3><p class="pkg-usd">~$395 USD</p><ul><li>Multi-feature web app</li><li>Admin dashboard and data views</li><li>Integration-ready architecture</li></ul></article>
+      <article class="package"><span class="pkg-badge">Scale Build</span><h3>Custom Quote</h3><p class="pkg-usd">Tailored in ZAR or USD</p><ul><li>Large custom platforms</li><li>Advanced workflows and APIs</li><li>Roadmap and phased delivery</li></ul></article>
+    </section>
+    <section class="inquiry-form" id="inquiry-section">
+      <h2>Get a <span>Quote</span></h2>
+      <p>Click a package above to pre-select it, then send your details and we'll reply on WhatsApp within minutes.</p>
+      <form id="inquiry-form" novalidate>
+        <div class="form-grid">
+          <div class="form-row"><label for="f-name">Your Name</label><input id="f-name" name="name" type="text" placeholder="e.g. Ruan van der Merwe" autocomplete="name" required></div>
+          <div class="form-row"><label for="f-contact">WhatsApp / Email</label><input id="f-contact" name="contact" type="text" placeholder="+27 82 ... or your@email.com" required></div>
+          <div class="form-row full"><label for="f-package">Package</label><select id="f-package" name="package"><option value="MVP Build (R2500)">MVP Build — R2500</option><option value="Growth Build (R6500)">Growth Build — R6500</option><option value="Scale Build (Custom Quote)">Scale Build — Custom Quote</option></select></div>
+          <div class="form-row full"><label for="f-msg">Message <span class="optional">(optional)</span></label><textarea id="f-msg" name="message" rows="3" placeholder="Describe the tool or app you want to build..."></textarea></div>
+        </div>
+        <button type="submit" class="btn-submit"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Send Inquiry via WhatsApp</button>
+      </form>
+    </section>
+    <div class="cta-row"><a class="btn btn-ghost" href="services.html">← Back to All Services</a></div>
+    <p class="footer-note">Software timelines and pricing depend on scope and integration complexity.</p>
+  </main>
+  <script src="service-pages.js"></script>
+</body>
+</html>

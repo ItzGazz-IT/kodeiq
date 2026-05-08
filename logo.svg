@@ -1,0 +1,23 @@
+<svg viewBox="0 0 74 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="kiq" x1="0" y1="0" x2="74" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#00d4ff"/>
+      <stop offset="48%"  stop-color="#5278f5"/>
+      <stop offset="100%" stop-color="#8c00cc"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0  0 0 0 0 0.65  0 0 0 0 1  0 0 0 0.4 0" result="c"/>
+      <feMerge><feMergeNode in="c"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)" stroke="url(#kiq)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Vertical bar -->
+    <line x1="12" y1="6"  x2="12" y2="74" stroke-width="14"/>
+    <!-- Upper arm -->
+    <line x1="21" y1="36" x2="68" y2="5"  stroke-width="11"/>
+    <!-- Lower arm -->
+    <line x1="21" y1="44" x2="68" y2="75" stroke-width="11"/>
+  </g>
+</svg>

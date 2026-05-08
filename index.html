@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KodeIQ — Premium Digital Experiences</title>
+  <meta name="description" content="Premium digital experiences — CV websites, portfolio sites, business websites, software solutions and landing pages. Starting at R400.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KodeIQ — Premium Digital Experiences">
+  <meta property="og:description" content="Premium digital experiences — CV websites, portfolio sites, business websites, software solutions and landing pages. Starting at R400.">
+  <meta property="og:url" content="https://kodeiq.co.za">
+  <meta property="og:image" content="https://kodeiq.co.za/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KodeIQ — Premium Digital Experiences">
+  <meta name="twitter:description" content="Premium digital experiences — CV websites, portfolio sites, business websites and more. Starting at R400.">
+</head>
+<body>
+
+  <!-- Global aurora canvas — fixed, behind everything -->
+  <canvas id="aurora-canvas"></canvas>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-tag">&lt;</span>Kode<span class="accent">IQ</span><span class="logo-tag"> /&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li class="has-dropdown">
+          <a href="services.html" class="dropdown-trigger">Services <svg class="chevron" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          <ul class="dropdown-panel" role="menu">
+            <li role="none"><a href="cv-websites.html" role="menuitem">CV Websites <span>From R400</span></a></li>
+            <li role="none"><a href="portfolio-websites.html" role="menuitem">Portfolio Sites <span>From R700</span></a></li>
+            <li role="none"><a href="business-websites.html" role="menuitem">Business Websites <span>From R1200</span></a></li>
+            <li role="none"><a href="software-development.html" role="menuitem">Software Dev <span>From R2500</span></a></li>
+            <li role="none"><a href="landing-pages.html" role="menuitem">Landing Pages <span>From R650</span></a></li>
+            <li role="none"><a href="personal-branding.html" role="menuitem">Personal Branding <span>From R900</span></a></li>
+            <li class="dropdown-all" role="none"><a href="services.html" role="menuitem">View All Services →</a></li>
+          </ul>
+        </li>
+        <li><a href="#showcase">Work</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact" class="nav-cta">Start a Project</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <!-- particle canvas -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- grid overlay -->
+    <div class="hero-grid"></div>
+
+    <!-- ambient light orbs -->
+    <div class="hero-orbs" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- decorative tech glyphs -->
+    <div class="deco-glyph deco-code-main" aria-hidden="true">&lt;/&gt;</div>
+    <div class="deco-glyph deco-bracket-left" aria-hidden="true">{</div>
+    <div class="deco-glyph deco-bracket-right" aria-hidden="true">}</div>
+
+    <!-- floating geometric shapes -->
+    <div class="geo-float" aria-hidden="true">
+      <div class="geo geo-diamond g1"></div>
+      <div class="geo geo-diamond g2"></div>
+      <div class="geo geo-ring g3"></div>
+      <div class="geo geo-dot-cluster">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- hero content -->
+    <div class="hero-content" id="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Premium Digital Agency · South Africa
+      </div>
+      <h1 class="hero-title">
+        Your Website.<br>
+        Your Brand.<br>
+        <span class="title-gradient">Your Future.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Premium digital experiences designed to help you<br class="br-hide">
+        stand out in a world that never stops scrolling.
+      </p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary">
+          <span>View Services</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Start Your Project</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">R400</span>
+          <span class="stat-label">Starting Price</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">48h</span>
+          <span class="stat-label">Fast Delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="services" id="services">
+    <!-- section background texture -->
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-hex-grid"></div>
+      <div class="sec-glow sg-blue"></div>
+      <div class="sec-glow sg-violet"></div>
+    </div>
+    <!-- floating decorations -->
+    <div class="deco-glyph deco-svc-curly" aria-hidden="true">{ }</div>
+    <div class="deco-glyph deco-svc-angle" aria-hidden="true">&lt;&gt;</div>
+    <!-- circuit line SVG -->
+    <svg class="circuit-lines" aria-hidden="true" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 200 H100 V80 H300 V200 H500 V320 H700 V200 H800" stroke="rgba(14,165,233,0.07)" stroke-width="1" stroke-dasharray="4 8"/>
+      <circle cx="100" cy="200" r="4" fill="rgba(14,165,233,0.2)"/>
+      <circle cx="300" cy="80"  r="4" fill="rgba(139,92,246,0.2)"/>
+      <circle cx="500" cy="200" r="4" fill="rgba(14,165,233,0.2)"/>
+      <circle cx="700" cy="320" r="4" fill="rgba(139,92,246,0.2)"/>
+      <circle cx="300" cy="200" r="2" fill="rgba(14,165,233,0.15)"/>
+      <circle cx="700" cy="200" r="2" fill="rgba(14,165,233,0.15)"/>
+    </svg>
+
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What We Build</span>
+        <h2 class="section-title">Premium Digital <span class="gradient-text">Solutions</span></h2>
+        <p class="section-desc">Every project is crafted with precision, purpose, and world-class design standards.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="card-glow"></div>
+          <div class="card-shine"></div>
+          <span class="card-tag">Career Growth</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Personal CV Websites</h3>
+          <p>Stand out from the crowd with a stunning digital CV that leaves a lasting impression on employers and clients.</p>
+          <div class="card-footer">
+            <div class="service-price">From R400 <span>(~$25)</span></div>
+            <a class="service-link" href="cv-websites.html">View Packages</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal" data-delay="100">
+          <div class="card-glow"></div>
+          <div class="card-shine"></div>
+          <span class="card-tag">Creative Showcase</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Portfolio Websites</h3>
+          <p>Showcase your creative work in an immersive gallery that captures attention and converts visitors into clients.</p>
+          <div class="card-footer">
+            <div class="service-price">From R700 <span>(~$45)</span></div>
+            <a class="service-link" href="portfolio-websites.html">View Packages</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="card-glow"></div>
+          <div class="card-shine"></div>
+          <span class="card-tag">Brand Authority</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Business Websites</h3>
+          <p>Elevate your brand with a professional business presence that builds trust and drives real results.</p>
+          <div class="card-footer">
+            <div class="service-price">From R1200 <span>(~$75)</span></div>
+            <a class="service-link" href="business-websites.html">View Packages</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal" data-delay="300">
+          <div class="card-glow"></div>
+          <div class="card-shine"></div>
+          <span class="card-tag">Custom Solutions</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Software Development</h3>
+          <p>Custom digital tools and applications built to solve real problems and scale with your ambitions.</p>
+          <div class="card-footer">
+            <div class="service-price">From R2500 <span>(~$150)</span></div>
+            <a class="service-link" href="software-development.html">View Packages</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal" data-delay="400">
+          <div class="card-glow"></div>
+          <div class="card-shine"></div>
+          <span class="card-tag">Conversion Focused</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Landing Pages</h3>
+          <p>High-converting pages designed to capture leads, drive sales, and grow your digital presence fast.</p>
+          <div class="card-footer">
+            <div class="service-price">From R650 <span>(~$40)</span></div>
+            <a class="service-link" href="landing-pages.html">View Packages</a>
+          </div>
+        </div>
+
+        <div class="service-card service-card--violet reveal" data-delay="500">
+          <div class="card-glow"></div>
+          <div class="card-shine"></div>
+          <span class="card-tag card-tag--violet">Brand Identity</span>
+          <div class="card-icon card-icon--violet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+          </div>
+          <h3>Digital Personal Branding</h3>
+          <p>Build a powerful personal brand online that opens doors, creates opportunities, and defines your legacy.</p>
+          <div class="card-footer">
+            <div class="service-price">From R900 <span>(~$55)</span></div>
+            <a class="service-link" href="personal-branding.html">View Packages</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="services-more reveal" data-delay="220">
+        <a class="btn btn-secondary" href="services.html">Browse All Service Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section class="process" id="process">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-glow sg-blue-left"></div>
+    </div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Process</span>
+        <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+        <p class="section-desc">From first message to live site — here's exactly what to expect.</p>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step reveal" data-delay="0">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <h3>Chat With Us</h3>
+          <p>Tell us your goals, budget and timeline over WhatsApp. No forms. No waiting. Just a straight conversation.</p>
+        </div>
+
+        <div class="process-connector" aria-hidden="true">
+          <svg viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12 H70 M58 4 L70 12 L58 20" stroke="rgba(0,212,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="process-step reveal" data-delay="150">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>We Build It</h3>
+          <p>We design and develop your site with precision. You get updates and a chance to give feedback before launch.</p>
+        </div>
+
+        <div class="process-connector" aria-hidden="true">
+          <svg viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12 H70 M58 4 L70 12 L58 20" stroke="rgba(0,212,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="process-step reveal" data-delay="300">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3>You Go Live</h3>
+          <p>Your site launches fully tested, mobile-ready and built to impress. We hand everything over — you own it completely.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SHOWCASE ═══ -->
+  <section class="showcase" id="showcase">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-glow sg-violet-center"></div>
+      <div class="sec-diagonal-lines"></div>
+    </div>
+
+    <!-- floating geo shapes -->
+    <div class="showcase-geo" aria-hidden="true">
+      <div class="geo geo-diamond sd1"></div>
+      <div class="geo geo-diamond sd2"></div>
+      <div class="geo geo-hex sh1"></div>
+      <div class="geo geo-hex sh2"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Crafted With <span class="gradient-text">Precision</span></h2>
+        <p class="section-desc">Premium digital experiences that leave a lasting impression on everyone who sees them.</p>
+      </div>
+      <div class="showcase-scene">
+        <div class="laptop-wrap reveal">
+          <!-- browser chrome decoration above laptop -->
+          <div class="browser-top-bar" aria-hidden="true">
+            <span class="btb-dot btb-red"></span>
+            <span class="btb-dot btb-yellow"></span>
+            <span class="btb-dot btb-green"></span>
+            <span class="btb-url"></span>
+          </div>
+          <div class="laptop">
+            <div class="laptop-screen">
+              <div class="mock-site">
+                <div class="mock-nav-bar">
+                  <div class="mock-logo"></div>
+                  <div class="mock-nav-links"><div></div><div></div><div></div></div>
+                </div>
+                <div class="mock-hero-area">
+                  <div class="mock-avatar-circle"></div>
+                  <div class="mock-text-lines">
+                    <div class="mock-line ml-70 ml-bright"></div>
+                    <div class="mock-line ml-50"></div>
+                    <div class="mock-line ml-40"></div>
+                    <div class="mock-btns"><div></div><div></div></div>
+                  </div>
+                </div>
+                <div class="mock-cards-row">
+                  <div class="mock-mini-card mc-blue"></div>
+                  <div class="mock-mini-card"></div>
+                  <div class="mock-mini-card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-chin"><div class="laptop-notch"></div></div>
+          </div>
+        </div>
+
+        <div class="showcase-info">
+          <div class="showcase-tag reveal" data-delay="100">
+            <div class="stag-icon stag-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="stag-text"><h4>CV Website</h4><p>Personal branding done right</p></div>
+            <span class="live-badge">Live</span>
+          </div>
+          <div class="showcase-tag reveal" data-delay="200">
+            <div class="stag-icon stag-violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="stag-text"><h4>Portfolio Site</h4><p>Creative work showcased</p></div>
+            <span class="live-badge">Live</span>
+          </div>
+          <div class="showcase-tag reveal" data-delay="300">
+            <div class="stag-icon stag-pink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div class="stag-text"><h4>Business Site</h4><p>Professional brand presence</p></div>
+            <span class="live-badge">Live</span>
+          </div>
+          <div class="showcase-quote reveal" data-delay="400">
+            <p>"We don't build websites — we build digital identities that open doors."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY KODEIQ ═══ -->
+  <section class="why" id="why">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-dot-grid"></div>
+      <div class="sec-glow sg-blue-right"></div>
+      <!-- node connections decoration -->
+      <svg class="node-connections" viewBox="0 0 1200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="120" y1="100" x2="360" y2="100" stroke="rgba(14,165,233,0.1)" stroke-width="1" stroke-dasharray="3 6"/>
+        <line x1="360" y1="100" x2="600" y2="100" stroke="rgba(139,92,246,0.1)" stroke-width="1" stroke-dasharray="3 6"/>
+        <line x1="600" y1="100" x2="840" y2="100" stroke="rgba(14,165,233,0.1)" stroke-width="1" stroke-dasharray="3 6"/>
+        <line x1="840" y1="100" x2="1080" y2="100" stroke="rgba(139,92,246,0.1)" stroke-width="1" stroke-dasharray="3 6"/>
+        <circle cx="120"  cy="100" r="5" fill="rgba(14,165,233,0.25)" />
+        <circle cx="360"  cy="100" r="5" fill="rgba(139,92,246,0.25)"/>
+        <circle cx="600"  cy="100" r="5" fill="rgba(14,165,233,0.25)" />
+        <circle cx="840"  cy="100" r="5" fill="rgba(139,92,246,0.25)"/>
+        <circle cx="1080" cy="100" r="5" fill="rgba(14,165,233,0.25)" />
+        <circle cx="120"  cy="100" r="12" stroke="rgba(14,165,233,0.1)" stroke-width="1"/>
+        <circle cx="600"  cy="100" r="12" stroke="rgba(14,165,233,0.1)" stroke-width="1"/>
+        <circle cx="1080" cy="100" r="12" stroke="rgba(14,165,233,0.1)" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="deco-glyph deco-why-slash" aria-hidden="true">//</div>
+
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">Built Different. <span class="gradient-text">Built Better.</span></h2>
+        <p class="section-desc">We don't just deliver websites — we deliver outcomes that matter.</p>
+      </div>
+      <div class="why-grid">
+
+        <div class="why-card reveal" data-delay="0">
+          <div class="why-card-glow"></div>
+          <div class="why-num">01</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Modern Design</h3>
+          <p>World-class aesthetics with current trends, premium typography and meticulous detail.</p>
+        </div>
+
+        <div class="why-card reveal" data-delay="100">
+          <div class="why-card-glow"></div>
+          <div class="why-num">02</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>Mobile Friendly</h3>
+          <p>Pixel-perfect across all devices — from mobile phone to 4K display, every time.</p>
+        </div>
+
+        <div class="why-card reveal" data-delay="200">
+          <div class="why-card-glow"></div>
+          <div class="why-num">03</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>From brief to live in record time. No endless waiting. No vague timelines.</p>
+        </div>
+
+        <div class="why-card reveal" data-delay="300">
+          <div class="why-card-glow"></div>
+          <div class="why-num">04</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Premium Quality</h3>
+          <p>No templates. No shortcuts. Every project is hand-crafted to be uniquely yours.</p>
+        </div>
+
+        <div class="why-card reveal" data-delay="400">
+          <div class="why-card-glow"></div>
+          <div class="why-num">05</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Professional Results</h3>
+          <p>Sites that convert visitors, impress employers, and build lasting credibility.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="testimonials" id="testimonials">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-glow sg-violet-center"></div>
+    </div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Client Stories</span>
+        <h2 class="section-title">Real Results. <span class="gradient-text">Real People.</span></h2>
+        <p class="section-desc">Don't take our word for it — here's what our clients say.</p>
+      </div>
+      <div class="testi-grid">
+
+        <div class="testi-card reveal" data-delay="0">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>"The CV website KodeIQ built me landed 3 job interviews in the first week. Employers kept commenting on how professional it looked. Worth every rand."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">T</div>
+            <div>
+              <strong>Thabo M.</strong>
+              <span>Marketing Professional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal" data-delay="150">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>"Our business website went live in 4 days and we got our first online enquiry the very next morning. Incredibly fast, professional and exactly what we envisioned."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">K</div>
+            <div>
+              <strong>Keisha N.</strong>
+              <span>Small Business Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal" data-delay="300">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>"I was skeptical about investing in a personal branding site, but the results speak for themselves. My freelance bookings doubled within the first month."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <strong>Ryan S.</strong>
+              <span>Freelance Designer</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING ═══ -->
+  <section class="pricing" id="pricing">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-glow sg-violet-center"></div>
+      <div class="sec-glow sg-blue-left"></div>
+    </div>
+
+    <!-- animated radial rings -->
+    <div class="pricing-rings" aria-hidden="true">
+      <div class="pring pring-1"></div>
+      <div class="pring pring-2"></div>
+      <div class="pring pring-3"></div>
+      <div class="pring pring-4"></div>
+    </div>
+
+    <!-- sparkle dots decoration -->
+    <div class="sparkles" aria-hidden="true">
+      <div class="sparkle s1"></div>
+      <div class="sparkle s2"></div>
+      <div class="sparkle s3"></div>
+      <div class="sparkle s4"></div>
+      <div class="sparkle s5"></div>
+      <div class="sparkle s6"></div>
+    </div>
+
+    <div class="deco-glyph deco-pricing-r" aria-hidden="true">R</div>
+
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Pricing</span>
+        <h2 class="section-title">Transparent. <span class="gradient-text">Affordable.</span></h2>
+        <p class="section-desc">Premium quality that doesn't cost a fortune. One price. Everything included.</p>
+      </div>
+
+      <!-- Services pricing grid -->
+      <div class="pricing-services-grid">
+        <a href="cv-websites.html" class="ps-card ps-featured reveal" data-delay="0">
+          <div class="ps-border-glow"></div>
+          <span class="ps-badge">Most Popular</span>
+          <div class="ps-icon">📄</div>
+          <h3>CV Websites</h3>
+          <p>Stand out to employers with a premium personal CV site that gets you noticed.</p>
+          <div class="ps-price"><span class="ps-from">from</span> <strong>R400</strong> <small>~$25</small></div>
+          <span class="ps-cta">View Packages <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="portfolio-websites.html" class="ps-card reveal" data-delay="80">
+          <div class="ps-icon">🎨</div>
+          <h3>Portfolio Sites</h3>
+          <p>Show your work with premium visual storytelling and a structure built to convert.</p>
+          <div class="ps-price"><span class="ps-from">from</span> <strong>R700</strong> <small>~$45</small></div>
+          <span class="ps-cta">View Packages <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="business-websites.html" class="ps-card reveal" data-delay="160">
+          <div class="ps-icon">🏢</div>
+          <h3>Business Websites</h3>
+          <p>Build trust and credibility with a professional site designed to generate leads.</p>
+          <div class="ps-price"><span class="ps-from">from</span> <strong>R1200</strong> <small>~$75</small></div>
+          <span class="ps-cta">View Packages <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="landing-pages.html" class="ps-card reveal" data-delay="240">
+          <div class="ps-icon">🚀</div>
+          <h3>Landing Pages</h3>
+          <p>Focused pages built to convert ads, launches, and campaigns into real results.</p>
+          <div class="ps-price"><span class="ps-from">from</span> <strong>R650</strong> <small>~$40</small></div>
+          <span class="ps-cta">View Packages <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="software-development.html" class="ps-card reveal" data-delay="320">
+          <div class="ps-icon">⚙️</div>
+          <h3>Software Development</h3>
+          <p>Custom tools, apps and automations that save time and scale your operations.</p>
+          <div class="ps-price"><span class="ps-from">from</span> <strong>R2500</strong> <small>~$150</small></div>
+          <span class="ps-cta">View Packages <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="personal-branding.html" class="ps-card reveal" data-delay="400">
+          <div class="ps-icon">✨</div>
+          <h3>Personal Branding</h3>
+          <p>Position yourself as the obvious choice in your niche and attract more opportunities.</p>
+          <div class="ps-price"><span class="ps-from">from</span> <strong>R900</strong> <small>~$55</small></div>
+          <span class="ps-cta">View Packages <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+      <p class="pricing-footnote reveal" data-delay="480">All packages are once-off payments. No subscriptions. No hidden fees. <a href="services.html">See full pricing →</a></p>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="faq" id="faq">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-glow sg-blue-left"></div>
+    </div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Got <span class="gradient-text">Questions?</span></h2>
+        <p class="section-desc">Everything you need to know before getting started.</p>
+      </div>
+      <div class="faq-list reveal" data-delay="100">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How long does it take to build my site? <svg class="faq-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Most projects are completed within 3–7 business days depending on the package and complexity. Express delivery is available — just ask.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do I own the website once it's done? <svg class="faq-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>100%. You own all the code, assets and content. We hand everything over to you at delivery — no strings attached.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What do I need to provide to get started? <svg class="faq-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Just your content — text, photos, and any branding you have. If you don't have everything ready, don't worry — we'll guide you through it.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you offer hosting? <svg class="faq-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>We build and deliver the site files. We can recommend reliable, affordable hosting options and help you get set up — including free options where suitable.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I make changes after the site launches? <svg class="faq-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Yes. Minor tweaks within 7 days of launch are included at no charge. Larger updates are available at a reasonable hourly rate — just reach out on WhatsApp.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you work with clients outside South Africa? <svg class="faq-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Absolutely. We work with clients globally. International payments are accepted and pricing can be quoted in USD on request.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is the price really once-off with no monthly fees? <svg class="faq-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Yes — every package is a single once-off payment. No subscriptions, no recurring charges, no hidden fees. What you see is what you pay.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact" id="contact">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-glow sg-blue-left"></div>
+      <div class="sec-glow sg-violet"></div>
+      <!-- wave rings around contact card -->
+      <div class="contact-rings">
+        <div class="cring cr1"></div>
+        <div class="cring cr2"></div>
+        <div class="cring cr3"></div>
+      </div>
+    </div>
+    <!-- chat bubble deco -->
+    <div class="chat-bubble-deco cb1" aria-hidden="true"></div>
+    <div class="chat-bubble-deco cb2" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Ready to <span class="gradient-text">Launch?</span></h2>
+        <p class="section-desc">Let's build something extraordinary together. Reach out and let's start your project today.</p>
+      </div>
+      <div class="contact-layout">
+
+        <div class="contact-card reveal">
+          <div class="contact-border-glow"></div>
+          <div class="contact-glow"></div>
+          <div class="contact-person">
+            <div class="person-avatar">G</div>
+            <div class="person-meta">
+              <h3>Gareth</h3>
+              <p>Founder &amp; Lead Developer</p>
+              <span class="avail-badge"><span class="avail-dot"></span>Available for projects</span>
+            </div>
+          </div>
+          <div class="contact-divider"></div>
+          <a href="https://wa.me/27826535019" target="_blank" rel="noopener" class="whatsapp-btn">
+            <div class="wa-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="wa-text">
+              <span class="wa-label">Chat on WhatsApp</span>
+              <span class="wa-number">+27 82 653 5019</span>
+            </div>
+            <svg class="wa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <div class="contact-quote">
+            <blockquote>"Your online presence is your most powerful business asset. Let's make it count."</blockquote>
+            <cite>— Gareth, KodeIQ Founder</cite>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="contact-feat reveal" data-delay="100">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <div><h4>Reply Within Hours</h4><p>Send us a message and we'll get back to you same day — usually within a few hours.</p></div>
+          </div>
+          <div class="contact-feat reveal" data-delay="200">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div><h4>Free Consultation</h4><p>Tell us what you need. No pressure, no commitment — just a straight conversation about your project.</p></div>
+          </div>
+          <div class="contact-feat reveal" data-delay="300">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div><h4>Fast Delivery</h4><p>Most projects go from brief to live within days. We move quickly without cutting corners.</p></div>
+          </div>
+          <div class="contact-feat reveal" data-delay="400">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div><h4>Satisfaction Guaranteed</h4><p>We revise until you're completely happy. Your satisfaction is not optional — it's the goal.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-top-glow"></div>
+    <div class="container">
+      <div class="footer-body">
+        <div class="footer-brand">
+          <span class="footer-logo">Kode<span class="accent">IQ</span></span>
+          <p>Premium digital experiences for ambitious people and brands who refuse to blend in.</p>
+          <a href="https://wa.me/27826535019" target="_blank" rel="noopener" class="footer-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            +27 82 653 5019
+          </a>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="cv-websites.html">CV Websites</a>
+            <a href="portfolio-websites.html">Portfolio Sites</a>
+            <a href="business-websites.html">Business Websites</a>
+            <a href="software-development.html">Software Solutions</a>
+            <a href="landing-pages.html">Landing Pages</a>
+            <a href="personal-branding.html">Personal Branding</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#process">How It Works</a>
+            <a href="#why">Why KodeIQ</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#showcase">Our Work</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 KodeIQ. All rights reserved.</p>
+        <p>Crafted with precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ FLOATING WHATSAPP ═══ -->
+  <a href="https://wa.me/27826535019" target="_blank" rel="noopener" class="wa-fab" id="wa-fab" aria-label="Chat on WhatsApp">
+    <div class="wa-fab-pulse p1"></div>
+    <div class="wa-fab-pulse p2"></div>
+    <div class="wa-fab-inner">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+    <span class="wa-fab-tip">Chat with us</span>
+  </a>
+
+  <!-- ═══ CV PROMO LIGHTBOX ═══ -->
+  <div class="lb-overlay" id="lb-overlay" role="dialog" aria-modal="true" aria-label="Special Offer">
+    <div class="lb-card" id="lb-card">
+      <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
+
+      <!-- Left: CV mockup preview -->
+      <div class="lb-left">
+        <div class="lb-mock-browser">
+          <div class="lb-browser-bar">
+            <span class="lbb-dot" style="background:#ff5f57"></span>
+            <span class="lbb-dot" style="background:#febc2e"></span>
+            <span class="lbb-dot" style="background:#28c840"></span>
+            <span class="lbb-url">kodeiq.co.za/your-name</span>
+          </div>
+          <div class="lb-mock-site">
+            <div class="lb-mock-header">
+              <div class="lb-mock-avatar"></div>
+              <div class="lb-mock-info">
+                <div class="lb-mock-line lml-w60 lml-bright"></div>
+                <div class="lb-mock-line lml-w40"></div>
+                <div class="lb-mock-line lml-w50"></div>
+                <div class="lb-mock-btns">
+                  <div class="lmb-primary"></div>
+                  <div class="lmb-secondary"></div>
+                </div>
+              </div>
+            </div>
+            <div class="lb-mock-skills">
+              <div class="lb-skill-tag"></div>
+              <div class="lb-skill-tag"></div>
+              <div class="lb-skill-tag"></div>
+              <div class="lb-skill-tag"></div>
+            </div>
+            <div class="lb-mock-cards">
+              <div class="lb-mock-card lmc-glow"></div>
+              <div class="lb-mock-card"></div>
+              <div class="lb-mock-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lb-mock-label">Your live CV website</div>
+      </div>
+
+      <!-- Right: pricing & CTA -->
+      <div class="lb-right">
+        <div class="lb-badge-row">
+          <span class="lb-badge lb-badge-fire">🔥 Special Offer</span>
+          <span class="lb-badge lb-badge-timer" id="lb-timer">Expires in <strong>15:00</strong></span>
+        </div>
+        <h2 class="lb-title">Your Professional<br><span class="lb-title-grad">CV Website</span></h2>
+        <p class="lb-desc">Stand out from thousands of job seekers with a stunning, live, personal CV website built just for you.</p>
+
+        <div class="lb-price-block">
+          <div class="lb-price-row">
+            <span class="lb-cur">R</span><span class="lb-num">400</span>
+            <span class="lb-separator">/</span>
+            <span class="lb-usd">≈ $25 <span class="lb-usd-note">USD</span></span>
+          </div>
+          <span class="lb-price-tag">once off · no hidden fees</span>
+        </div>
+
+        <ul class="lb-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Custom-designed, fully unique</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>1 Year free domain included</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Mobile-perfect on all devices</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Delivered in 48 hours</li>
+        </ul>
+
+        <a href="https://wa.me/27826535019?text=Hi%20Gareth!%20I%27m%20interested%20in%20the%20R400%20CV%20website%20special." target="_blank" rel="noopener" class="lb-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Claim This Deal on WhatsApp
+        </a>
+        <p class="lb-note">Message us and we'll get started today.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor-glow" id="cursor-glow"></div>
+  <script src="script.js"></script>
+</body>
+</html>
