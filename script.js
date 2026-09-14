@@ -5,6 +5,8 @@
 
 'use strict';
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /* ══════════════════════════════════════
    AURORA CANVAS — global fixed BG
 ══════════════════════════════════════ */
@@ -254,6 +256,69 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+
+/* ── Scroll progress, active sections and ambient depth ── */
+const scrollProgress = document.getElementById('scroll-progress');
+const parallaxLayers = [...document.querySelectorAll('[data-parallax]')];
+let scrollFrame = 0;
+
+function paintScrollEffects() {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? Math.min(window.scrollY / maxScroll, 1) : 0;
+  if (scrollProgress) scrollProgress.style.transform = `scaleX(${progress})`;
+
+  if (!prefersReducedMotion) {
+    parallaxLayers.forEach(layer => {
+      const section = layer.closest('section');
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      const speed = Number(layer.dataset.parallax) || 0;
+      layer.style.transform = `translate3d(0, ${rect.top * speed}px, 0)`;
+    });
+  }
+  scrollFrame = 0;
+}
+
+window.addEventListener('scroll', () => {
+  if (!scrollFrame) scrollFrame = requestAnimationFrame(paintScrollEffects);
+}, { passive: true });
+window.addEventListener('resize', paintScrollEffects, { passive: true });
+paintScrollEffects();
+
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => entry.target.classList.toggle('section-active', entry.isIntersecting));
+}, { threshold: .28 });
+document.querySelectorAll('main section, body > section').forEach(section => sectionObserver.observe(section));
+
+
+/* ── Automation opportunity estimator ── */
+const automationForm = document.getElementById('automation-calculator');
+if (automationForm) {
+  const task = document.getElementById('automation-task');
+  const people = document.getElementById('automation-people');
+  const hours = document.getElementById('automation-hours');
+  const peopleOutput = document.getElementById('people-output');
+  const hoursOutput = document.getElementById('hours-output');
+  const result = document.getElementById('automation-result');
+  const cta = document.getElementById('automation-cta');
+
+  function updateAutomationEstimate() {
+    const monthlyHours = Math.round(Number(people.value) * Number(hours.value) * 4.33 * .8);
+    peopleOutput.value = people.value;
+    peopleOutput.textContent = people.value;
+    hoursOutput.value = hours.value;
+    hoursOutput.textContent = hours.value;
+    result.textContent = monthlyHours.toLocaleString();
+
+    const brief = `Hi KodeIQ! I'd like to automate ${task.value.toLowerCase()}. Around ${people.value} people spend ${hours.value} hours each week on it. Your estimator suggests we could return roughly ${monthlyHours} hours per month. Can we discuss it?`;
+    cta.href = `https://wa.me/27826535019?text=${encodeURIComponent(brief)}`;
+  }
+
+  [task, people, hours].forEach(control => control.addEventListener('input', updateAutomationEstimate));
+  updateAutomationEstimate();
+}
 
 
 /* ══════════════════════════════════════

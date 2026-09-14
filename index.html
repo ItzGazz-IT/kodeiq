@@ -23,6 +23,8 @@
 </head>
 <body>
 
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
   <!-- Global aurora canvas — fixed, behind everything -->
   <canvas id="aurora-canvas"></canvas>
 
@@ -41,6 +43,7 @@
             <li role="none"><a href="portfolio-websites.html" role="menuitem">Portfolio Sites <span>From R700</span></a></li>
             <li role="none"><a href="business-websites.html" role="menuitem">Business Websites <span>From R1200</span></a></li>
             <li role="none"><a href="software-development.html" role="menuitem">Software Dev <span>From R2500</span></a></li>
+            <li role="none"><a href="#automation" role="menuitem">Automation Estimator <span>Try it</span></a></li>
             <li role="none"><a href="landing-pages.html" role="menuitem">Landing Pages <span>From R650</span></a></li>
             <li role="none"><a href="personal-branding.html" role="menuitem">Personal Branding <span>From R900</span></a></li>
             <li class="dropdown-all" role="none"><a href="services.html" role="menuitem">View All Services →</a></li>
@@ -259,6 +262,57 @@
       <div class="services-more reveal" data-delay="220">
         <a class="btn btn-secondary" href="services.html">Browse All Service Packages</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ AUTOMATION ESTIMATOR ═══ -->
+  <section class="automation-lab" id="automation">
+    <div class="sec-bg" aria-hidden="true">
+      <div class="sec-glow sg-violet-center" data-parallax="-0.08"></div>
+      <div class="automation-grid-bg"></div>
+    </div>
+    <div class="container automation-layout">
+      <div class="automation-copy reveal reveal-left">
+        <span class="section-label">Automation Lab</span>
+        <h2 class="section-title">What could your team <span class="gradient-text">get back?</span></h2>
+        <p class="section-desc">Estimate the time repetitive work costs each month. Then send us a ready-made brief in one click.</p>
+        <div class="automation-flow" aria-hidden="true">
+          <span>Manual task</span><i></i><span>Smart workflow</span><i></i><span>Time returned</span>
+        </div>
+      </div>
+
+      <form class="automation-calculator reveal reveal-right" id="automation-calculator">
+        <div class="calc-field">
+          <label for="automation-task">What gets repeated?</label>
+          <select id="automation-task">
+            <option value="Lead follow-up">Lead follow-up</option>
+            <option value="Data capture and reporting">Data capture &amp; reporting</option>
+            <option value="Bookings and reminders">Bookings &amp; reminders</option>
+            <option value="Stock or order updates">Stock or order updates</option>
+            <option value="Staff administration">Staff administration</option>
+            <option value="Another repetitive workflow">Something else</option>
+          </select>
+        </div>
+        <div class="calc-range-group">
+          <div class="calc-field">
+            <label for="automation-people">People doing it <output id="people-output">3</output></label>
+            <input type="range" id="automation-people" min="1" max="30" value="3">
+          </div>
+          <div class="calc-field">
+            <label for="automation-hours">Hours each week <output id="hours-output">5</output></label>
+            <input type="range" id="automation-hours" min="1" max="40" value="5">
+          </div>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <span>Potential time returned</span>
+          <strong><span id="automation-result">52</span> hours</strong>
+          <small>per month, assuming 80% of the task can be automated</small>
+        </div>
+        <a class="btn btn-primary calc-cta" id="automation-cta" href="https://wa.me/27826535019" target="_blank" rel="noopener">
+          Send my automation brief
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </form>
     </div>
   </section>
 
@@ -801,6 +855,7 @@
             <a href="portfolio-websites.html">Portfolio Sites</a>
             <a href="business-websites.html">Business Websites</a>
             <a href="software-development.html">Software Solutions</a>
+            <a href="#automation">Automation Estimator</a>
             <a href="landing-pages.html">Landing Pages</a>
             <a href="personal-branding.html">Personal Branding</a>
           </div>
