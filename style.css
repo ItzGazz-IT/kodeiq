@@ -726,22 +726,25 @@ section > .container, section > .section-header { position:relative; z-index:2; 
   text-decoration: none;
 }
 .logo-mark {
-  height: 32px;
-  width: auto;
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
   flex-shrink: 0;
+  filter: drop-shadow(0 0 12px rgba(14,165,233,.22));
 }
-.logo-wordmark {
-  font-family: var(--fh);
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: var(--tx1);
+.logo-wordmark-img {
+  display:block;
+  width:auto;
+  height:25px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 10px rgba(37,99,235,.12));
 }
 .footer-logo-link {
   margin-bottom: 16px;
+  width:max-content;
 }
-.footer-logo-link .logo-mark { height: 36px; }
-.footer-logo-link .logo-wordmark { font-size: 1.45rem; }
+.footer-logo-link .logo-mark { width:48px; height:48px; }
+.footer-logo-link .logo-wordmark-img { height:30px; }
 .accent { color: var(--blue); }
 .logo-tag { color: var(--blue); opacity: 0.75; font-weight: 700; }
 

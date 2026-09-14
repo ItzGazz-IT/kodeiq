@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Animated KodeIQ KIQ Monogram</title>
+  <desc id="desc">The original KodeIQ monogram with a staggered reveal and animated electric-blue to violet gradient.</desc>
+
+  <defs>
+    <linearGradient id="kodeiqGradient" x1="140" y1="140" x2="884" y2="884" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00C8FF">
+        <animate attributeName="stop-color" values="#00C8FF;#2563EB;#00C8FF" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#2563EB">
+        <animate attributeName="stop-color" values="#2563EB;#7C2CFF;#2563EB" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#7C2CFF">
+        <animate attributeName="stop-color" values="#7C2CFF;#00C8FF;#7C2CFF" dur="5s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .part { transform-box: fill-box; transform-origin: center; opacity: 0; }
+      .ring { animation: ringIn .9s cubic-bezier(.2,.8,.2,1) .05s forwards; }
+      .k    { animation: partIn .55s cubic-bezier(.2,.8,.2,1) .55s forwards; }
+      .i    { animation: partIn .45s cubic-bezier(.2,.8,.2,1) .85s forwards; }
+      .tail { animation: tailIn .55s cubic-bezier(.2,.8,.2,1) 1.08s forwards; }
+      .glow { opacity: 0; animation: glowIn 1s ease 1.35s forwards, breathe 3.4s ease-in-out 2.2s infinite; }
+
+      @keyframes ringIn {
+        0%   { opacity: 0; transform: scale(.86) rotate(-10deg); }
+        100% { opacity: 1; transform: scale(1) rotate(0deg); }
+      }
+      @keyframes partIn {
+        0%   { opacity: 0; transform: translateY(28px) scale(.94); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes tailIn {
+        0%   { opacity: 0; transform: translate(-36px,-36px) scale(.92); }
+        100% { opacity: 1; transform: translate(0,0) scale(1); }
+      }
+      @keyframes glowIn { to { opacity: .22; } }
+      @keyframes breathe {
+        0%,100% { opacity: .12; }
+        50%     { opacity: .28; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .part, .glow { animation: none !important; opacity: 1; transform: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- subtle glow uses the exact original geometry -->
+  <g class="glow" filter="url(#softGlow)" fill="url(#kodeiqGradient)" aria-hidden="true">
+    <path d="M512 96 C282.25 96 96 282.25 96 512 C96 741.75 282.25 928 512 928 C603.75 928 688.57 898.29 757.35 848 L689.46 780.11 C638.87 814.55 577.78 834.67 512 834.67 C333.76 834.67 189.33 690.24 189.33 512 C189.33 333.76 333.76 189.33 512 189.33 C690.24 189.33 834.67 333.76 834.67 512 C834.67 595.12 803.22 670.9 751.56 728.09 L817.51 794.04 C886.1 719.63 928 620.52 928 512 C928 282.25 741.75 96 512 96 Z"/>
+    <path d="M431 303 L431 412 L327 512 L431 612 L431 721 L214 512 Z"/>
+    <rect x="488" y="303" width="74" height="418" rx="6"/>
+    <path d="M601 585 L665 585 L880 800 L816 864 L601 649 Z"/>
+  </g>
+
+  <!-- ORIGINAL KODEIQ SVG GEOMETRY, UNCHANGED -->
+  <path class="part ring" d="M512 96 C282.25 96 96 282.25 96 512 C96 741.75 282.25 928 512 928 C603.75 928 688.57 898.29 757.35 848 L689.46 780.11 C638.87 814.55 577.78 834.67 512 834.67 C333.76 834.67 189.33 690.24 189.33 512 C189.33 333.76 333.76 189.33 512 189.33 C690.24 189.33 834.67 333.76 834.67 512 C834.67 595.12 803.22 670.9 751.56 728.09 L817.51 794.04 C886.1 719.63 928 620.52 928 512 C928 282.25 741.75 96 512 96 Z" fill="url(#kodeiqGradient)"/>
+  <path class="part k" d="M431 303 L431 412 L327 512 L431 612 L431 721 L214 512 Z" fill="url(#kodeiqGradient)"/>
+  <rect class="part i" x="488" y="303" width="74" height="418" rx="6" fill="url(#kodeiqGradient)"/>
+  <path class="part tail" d="M601 585 L665 585 L880 800 L816 864 L601 649 Z" fill="url(#kodeiqGradient)"/>
+</svg>

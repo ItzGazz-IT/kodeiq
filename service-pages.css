@@ -52,7 +52,31 @@ body {
   font-weight: 800;
   letter-spacing: 0.3px;
 }
-.brand a { color: var(--tx1); text-decoration: none; }
+.brand a {
+  color: var(--tx1);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0;
+}
+.brand a::before {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  background: url('KodeIQ_Animated_Monogram.svg') center/contain no-repeat;
+  filter: drop-shadow(0 0 12px rgba(14,165,233,.22));
+}
+.brand a::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 25px;
+  background: url('KodeIQ_Wordmark_Transparent.png') center/contain no-repeat;
+  filter: drop-shadow(0 0 10px rgba(37,99,235,.12));
+}
 .brand .accent { color: var(--blue); }
 
 .nav-links {
