@@ -69,6 +69,16 @@ body {
   pointer-events: none;
 }
 
+/* Hero capability signal */
+.hero-capabilities { display:flex; align-items:center; justify-content:center; gap:14px; margin:24px auto 4px; font-family:var(--fh); }
+.capability-status { display:flex; align-items:center; gap:7px; color:var(--tx2); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+.capability-status i { width:7px; height:7px; border-radius:50%; background:#34d399; box-shadow:0 0 0 5px rgba(52,211,153,.08),0 0 14px #34d399; animation:statusPulse 2s ease-in-out infinite; }
+.capability-window { width:min(440px,50vw); overflow:hidden; mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent); }
+.capability-track { display:flex; align-items:center; gap:18px; width:max-content; color:var(--blue); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; animation:capabilityMarquee 13s linear infinite; }
+.capability-track b { color:var(--violet); font-weight:400; }
+@keyframes capabilityMarquee { to { transform:translateX(calc(-50% - 9px)); } }
+@keyframes statusPulse { 50% { opacity:.45; transform:scale(.8); } }
+
 /* ─── Film grain overlay ─── */
 body::after {
   content: '';
@@ -1958,6 +1968,11 @@ section > .container, section > .section-header { position:relative; z-index:2; 
    AUTOMATION LAB + ENHANCED SCROLL MOTION
 ═══════════════════════════════════════════ */
 .automation-lab { padding: 130px 0; overflow: hidden; isolation: isolate; }
+.services::after, .automation-lab::after, .showcase::after {
+  content:''; position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.7;
+  background:radial-gradient(520px circle at var(--pointer-x,50%) var(--pointer-y,50%),rgba(14,165,233,.055),transparent 70%);
+  transition:opacity .3s ease;
+}
 .automation-grid-bg {
   position: absolute; inset: 0; opacity: .16;
   background-image:
@@ -1979,6 +1994,28 @@ section > .container, section > .section-header { position:relative; z-index:2; 
   backdrop-filter: blur(18px); position: relative; overflow: hidden;
 }
 .automation-calculator::before { content: ''; position: absolute; inset: 0 0 auto; height: 2px; background: linear-gradient(90deg, transparent, var(--blue), var(--violet), transparent); }
+.workflow-console { margin-bottom:28px; border:1px solid rgba(14,165,233,.18); border-radius:15px; background:rgba(3,8,20,.7); overflow:hidden; box-shadow:inset 0 0 35px rgba(14,165,233,.035); }
+.console-bar { display:flex; align-items:center; justify-content:space-between; padding:11px 13px; border-bottom:1px solid rgba(255,255,255,.07); color:var(--tx2); font:600 .67rem/1 var(--fh); letter-spacing:.09em; text-transform:uppercase; }
+.console-bar span { display:flex; align-items:center; gap:7px; }
+.console-bar span i { width:6px; height:6px; border-radius:50%; background:#34d399; box-shadow:0 0 10px #34d399; }
+.console-bar button { border:1px solid rgba(14,165,233,.35); border-radius:99px; color:var(--blue); background:rgba(14,165,233,.07); padding:7px 11px; font:inherit; cursor:pointer; transition:var(--t); }
+.console-bar button:hover { color:#fff; border-color:var(--blue); background:rgba(14,165,233,.16); box-shadow:0 0 20px rgba(14,165,233,.15); }
+.console-bar button:disabled { opacity:.5; cursor:wait; }
+.workflow-nodes { display:grid; grid-template-columns:1fr 34px 1fr 34px 1fr; align-items:center; padding:18px 14px; }
+.workflow-node { position:relative; padding:11px 8px; border:1px solid rgba(255,255,255,.08); border-radius:10px; background:rgba(255,255,255,.025); transition:all .35s var(--ease); }
+.workflow-node span { color:var(--blue); font:600 .58rem/1 var(--fh); }
+.workflow-node strong,.workflow-node small { display:block; }
+.workflow-node strong { margin:5px 0 2px; color:var(--tx1); font-size:.74rem; }
+.workflow-node small { color:var(--tx3); font-size:.62rem; }
+.workflow-node.active { transform:translateY(-3px); border-color:var(--blue); background:rgba(14,165,233,.11); box-shadow:0 0 28px rgba(14,165,233,.15); }
+.workflow-node.done { border-color:rgba(52,211,153,.55); }
+.workflow-node.done span,.workflow-node.done small { color:#34d399; }
+.workflow-line { height:1px; background:rgba(255,255,255,.09); overflow:hidden; }
+.workflow-line i { display:block; width:45%; height:100%; opacity:0; background:linear-gradient(90deg,transparent,var(--blue)); box-shadow:0 0 8px var(--blue); }
+.workflow-line.active i { opacity:1; animation:dataTravel .65s linear infinite; }
+.console-log { display:flex; justify-content:space-between; gap:14px; padding:10px 13px; border-top:1px solid rgba(255,255,255,.06); color:var(--tx3); font:400 .63rem/1.4 monospace; }
+.console-log b { color:var(--violet); white-space:nowrap; }
+@keyframes dataTravel { from { transform:translateX(-110%); } to { transform:translateX(250%); } }
 .calc-field { display: grid; gap: 10px; margin-bottom: 24px; }
 .calc-field label { display: flex; justify-content: space-between; color: var(--tx2); font-size: .84rem; font-weight: 600; }
 .calc-field output { color: var(--blue); font-family: var(--fh); }
@@ -2011,6 +2048,13 @@ section > .container, section > .section-header { position:relative; z-index:2; 
   .automation-flow { flex-direction: column; }
   .automation-flow i { width: 1px; height: 18px; flex: none; background: linear-gradient(var(--blue), var(--violet)); }
   .automation-flow i::after { right: -2px; top: auto; bottom: 0; transform: rotate(90deg); }
+  .hero-capabilities { flex-direction:column; gap:10px; }
+  .capability-window { width:82vw; }
+  .workflow-nodes { grid-template-columns:1fr; gap:8px; }
+  .workflow-line { width:1px; height:14px; margin:auto; }
+  .workflow-line i { width:100%; height:45%; background:linear-gradient(transparent,var(--blue)); }
+  .workflow-line.active i { animation:dataTravelVertical .65s linear infinite; }
+  @keyframes dataTravelVertical { from { transform:translateY(-110%); } to { transform:translateY(250%); } }
 }
 
 @media (prefers-reduced-motion: reduce) {

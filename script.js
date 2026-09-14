@@ -321,6 +321,74 @@ if (automationForm) {
 }
 
 
+/* ── Live automation workflow showcase ── */
+const workflowConsole = document.getElementById('workflow-console');
+if (workflowConsole) {
+  const runButton = document.getElementById('run-workflow');
+  const nodes = [...workflowConsole.querySelectorAll('.workflow-node')];
+  const lines = [...workflowConsole.querySelectorAll('.workflow-line')];
+  const log = document.getElementById('workflow-log');
+  const time = document.getElementById('workflow-time');
+  const messages = [
+    'Lead captured from website. Contact record created.',
+    'Lead scored and routed using project requirements.',
+    'Personal follow-up prepared and delivery scheduled.'
+  ];
+  let running = false;
+
+  const pause = ms => new Promise(resolve => setTimeout(resolve, prefersReducedMotion ? 30 : ms));
+  async function runWorkflow() {
+    if (running) return;
+    running = true;
+    runButton.disabled = true;
+    runButton.textContent = 'Running…';
+    nodes.forEach(node => node.classList.remove('active', 'done'));
+    lines.forEach(line => line.classList.remove('active'));
+    time.textContent = '0.0s';
+
+    const started = performance.now();
+    for (let index = 0; index < nodes.length; index++) {
+      nodes[index].classList.add('active');
+      nodes[index].querySelector('small').textContent = 'Processing';
+      log.textContent = messages[index];
+      if (index > 0) lines[index - 1].classList.remove('active');
+      await pause(720);
+      nodes[index].classList.remove('active');
+      nodes[index].classList.add('done');
+      nodes[index].querySelector('small').textContent = 'Complete';
+      if (lines[index]) lines[index].classList.add('active');
+      time.textContent = `${((performance.now() - started) / 1000).toFixed(1)}s`;
+      await pause(280);
+    }
+    lines.forEach(line => line.classList.remove('active'));
+    log.textContent = 'Workflow complete. No copying, chasing or manual hand-off.';
+    runButton.textContent = 'Run again';
+    runButton.disabled = false;
+    running = false;
+  }
+
+  runButton.addEventListener('click', runWorkflow);
+  const workflowObserver = new IntersectionObserver(([entry], observer) => {
+    if (!entry.isIntersecting) return;
+    runWorkflow();
+    observer.disconnect();
+  }, { threshold: .65 });
+  workflowObserver.observe(workflowConsole);
+}
+
+
+/* ── Cursor-reactive section lighting ── */
+if (!prefersReducedMotion && window.matchMedia('(pointer:fine)').matches) {
+  document.querySelectorAll('section').forEach(section => {
+    section.addEventListener('pointermove', event => {
+      const rect = section.getBoundingClientRect();
+      section.style.setProperty('--pointer-x', `${event.clientX - rect.left}px`);
+      section.style.setProperty('--pointer-y', `${event.clientY - rect.top}px`);
+    }, { passive: true });
+  });
+}
+
+
 /* ══════════════════════════════════════
    HERO PARALLAX
 ══════════════════════════════════════ */

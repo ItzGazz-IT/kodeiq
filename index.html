@@ -107,6 +107,14 @@
         Websites, custom tools and automation—designed and built<br class="br-hide">
         with care around the way your business actually works.
       </p>
+      <div class="hero-capabilities" aria-label="KodeIQ capabilities">
+        <span class="capability-status"><i></i> Systems online</span>
+        <div class="capability-window">
+          <div class="capability-track">
+            <span>Web experiences</span><b>→</b><span>Business automation</span><b>→</b><span>Custom applications</span><b>✦</b><span>Web experiences</span><b>→</b><span>Business automation</span><b>→</b><span>Custom applications</span><b>✦</b>
+          </div>
+        </div>
+      </div>
       <div class="hero-buttons">
         <a href="#services" class="btn btn-primary">
           <span>Explore Services</span>
@@ -282,6 +290,20 @@
       </div>
 
       <form class="automation-calculator reveal reveal-right" id="automation-calculator">
+        <div class="workflow-console" id="workflow-console">
+          <div class="console-bar">
+            <span><i></i> Live workflow</span>
+            <button type="button" id="run-workflow">Run demo</button>
+          </div>
+          <div class="workflow-nodes" aria-live="polite">
+            <div class="workflow-node" data-step="0"><span>01</span><strong>New lead</strong><small>Captured</small></div>
+            <div class="workflow-line"><i></i></div>
+            <div class="workflow-node" data-step="1"><span>02</span><strong>Qualify</strong><small>Checking</small></div>
+            <div class="workflow-line"><i></i></div>
+            <div class="workflow-node" data-step="2"><span>03</span><strong>Follow up</strong><small>Queued</small></div>
+          </div>
+          <div class="console-log"><span id="workflow-log">Ready. Run the workflow to see KodeIQ automation in action.</span><b id="workflow-time">0.0s</b></div>
+        </div>
         <div class="calc-field">
           <label for="automation-task">What gets repeated?</label>
           <select id="automation-task">
